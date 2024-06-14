@@ -70,7 +70,7 @@ def pedido(menu, carrinho):
                 carrinho.append(produto)
                 print(f"Item '{item}' adicionado ao carrinho.")
                 break
-        else:
+            else:
                 print("Item não encontrado.")
     else:
         print("Categoria não encontrada.")
@@ -138,3 +138,6 @@ while opcao:
             for nome, valor in item.items():
                 print(f" - {nome}: R${valor:.2f}")
         print()
+
+with open("cardapio.txt", "a") as arquivo:
+    arquivo.write(f"Cafeteria Alan: \n\n{menu} \n")
