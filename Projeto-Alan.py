@@ -22,8 +22,8 @@ def remover_item(menu):
                 menu[categoria].remove(produto)
                 print(f"Item '{item}' removido da categoria {categoria}.")
                 break
-        else:
-            print("Item não encontrado.")
+            else:
+                print("Item não encontrado.")
     else:
         print("Categoria não encontrada.")
 
