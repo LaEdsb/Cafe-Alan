@@ -7,6 +7,20 @@ def adicionar_item(menu):
       print(f"Item '{item}' adicionado à categoria {categoria}.")
   else:
       print("Categoria não encontrada.")
+
+def remover_item(menu):
+  categoria = int(input("Escolha a categoria: \n| 1 - entradas \n| 2 - pratos principais \n| 3 - sobremesas \n| 4 - bebidas \n "))
+  if categoria in menu:
+      item = input(f"\nDigite o item que você quer remover em {categoria}: ")
+      for produto in menu[categoria]:
+          if item in produto:
+              menu[categoria].remove(produto)
+              print(f"Item '{item}' removido da categoria {categoria}.")
+              break
+      else:
+          print("Item não encontrado.")
+  else:
+      print("Categoria não encontrada.")
       
 def buscar_itens(menu):
   busca = int(input("Escolha a categoria: \n | 1 - entradas \n| 2 - pratos principais \n| 3 - sobremesas \n| 4 - bebidas \n "))
